@@ -1,0 +1,16 @@
+{
+  "name": "fib",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "cmake -B ./build -DCMAKE_CXX_COMPILER=clang++ -DCMAKE_C_COMPILE=clang -DCMAKE_BUILD_TYPE=Release -S . && cmake --build ./build --config Release",
+    "dev": "cmake -B ./build -DCMAKE_CXX_COMPILER=clang++ -DCMAKE_C_COMPILE=clang -DCMAKE_BUILD_TYPE=Debug -S . && cmake --build ./build --config Debug"
+  },
+  "author": "you",
+  "license": "GPL-3.0-or-later",
+  "dependencies": {
+    "fmt": "github:fmtlib/fmt"
+  }
+}

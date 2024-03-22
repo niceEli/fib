@@ -1,0 +1,2 @@
+# fib
+ fiboncai sequenc

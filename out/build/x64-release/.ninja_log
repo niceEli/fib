@@ -1,0 +1,7 @@
+# ninja log v5
+10	773	7327756973570340	CMakeFiles/fib.dir/src/otherFle.cpp.obj	efbfa5f91615a1b7
+19	846	7327756974292360	node_modules/fmt/CMakeFiles/fmt.dir/src/os.cc.obj	d75034c06be16336
+6	973	7327756975554550	CMakeFiles/fib.dir/src/main.cpp.obj	72c8fe79e741ec85
+15	1624	7327756982057699	node_modules/fmt/CMakeFiles/fmt.dir/src/format.cc.obj	766098785e5a27c9
+1624	1716	7327756982969131	node_modules/fmt/fmt.lib	6d1688886781a1a5
+1716	1867	7327756984394448	fib.exe	a297a85d99437564
