@@ -17,9 +17,7 @@ if(CMAKE_VERSION VERSION_GREATER 3.12)
     set_property(TARGET ${PROJECT_NAME} PROPERTY CXX_STANDARD 20)
 endif()
 
-# Include libraries
-target_link_libraries(${PROJECT_NAME} PRIVATE fmt::fmt)
-
+# Automatically link libraries found in node_modules
 file(GLOB PACKAGE_DIRS "${CMAKE_CURRENT_SOURCE_DIR}/node_modules/*")
 
 foreach(PACKAGE_DIR ${PACKAGE_DIRS})
@@ -28,6 +26,8 @@ foreach(PACKAGE_DIR ${PACKAGE_DIRS})
         if(CMAKE_FILES)
             message(STATUS "Adding package in ${PACKAGE_DIR}")
             add_subdirectory(${PACKAGE_DIR})
+            get_filename_component(PACKAGE_NAME ${PACKAGE_DIR} NAME)
+            target_link_libraries(${PROJECT_NAME} PRIVATE ${PACKAGE_NAME})
         endif()
     endif()
 endforeach()

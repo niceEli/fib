@@ -4,6 +4,8 @@
 #include "../include/main.h"
 #include "../include/fib.h"
 
+#include <string>
+
 #include <chrono>
 
 int main()
